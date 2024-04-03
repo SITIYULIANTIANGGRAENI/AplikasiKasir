@@ -94,6 +94,11 @@ ResultSet rst;
         btnsimpan.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnsimpan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icons8-bookmark-20.png"))); // NOI18N
         btnsimpan.setText("SIMPAN");
+        btnsimpan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsimpanActionPerformed(evt);
+            }
+        });
 
         btnedit.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnedit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-edit-20.png"))); // NOI18N
@@ -330,6 +335,11 @@ ResultSet rst;
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_tblpelangganAncestorAdded
+
+    private void btnsimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsimpanActionPerformed
+simpan();
+clear();// TODO add your handling code here:
+    }//GEN-LAST:event_btnsimpanActionPerformed
 
     /**
      * @param args the command line arguments

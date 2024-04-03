@@ -212,7 +212,7 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        btnbaru = new javax.swing.JButton();
+        btnkeluar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblpenjualan = new javax.swing.JTable();
         btntambah = new javax.swing.JButton();
@@ -273,6 +273,11 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
         btnbayar.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         btnbayar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-money-transfer-20_1.png"))); // NOI18N
         btnbayar.setText("BAYAR");
+        btnbayar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnbayarActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(153, 204, 255));
 
@@ -302,9 +307,14 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-receipt-dollar-20.png"))); // NOI18N
         jLabel4.setText("Data Penjualan");
 
-        btnbaru.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnbaru.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-new-20_1.png"))); // NOI18N
-        btnbaru.setText("BARU");
+        btnkeluar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnkeluar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-logout-rounded-20.png"))); // NOI18N
+        btnkeluar.setText("Keluar");
+        btnkeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnkeluarActionPerformed(evt);
+            }
+        });
 
         tblpenjualan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -406,7 +416,7 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(btnbayar)
                                     .addGap(60, 60, 60)
-                                    .addComponent(btnbaru))))))
+                                    .addComponent(btnkeluar))))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -455,7 +465,7 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
                         .addGap(54, 54, 54)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnbayar)
-                            .addComponent(btnbaru))))
+                            .addComponent(btnkeluar))))
                 .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -469,7 +479,8 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
     }// </editor-fold>//GEN-END:initComponents
 
     private void btncariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncariActionPerformed
-        cari();        // TODO add your handling code here:
+        cari();    
+        // TODO add your handling code here:
     }//GEN-LAST:event_btncariActionPerformed
 
     private void tblprodukMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblprodukMouseClicked
@@ -558,6 +569,22 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
         cari();        // TODO add your handling code here:
     }//GEN-LAST:event_btnhapusActionPerformed
 
+    private void btnbayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbayarActionPerformed
+total();
+simpan();
+autonumber();
+txttotal.setText("");
+txtbayar.setText("");
+txtkembalian.setText("");
+txtidpenjualan.setText("");
+// TODO add your handling code here:
+    }//GEN-LAST:event_btnbayarActionPerformed
+
+    private void btnkeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnkeluarActionPerformed
+new MenuUtama().setVisible(true);
+        this.dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_btnkeluarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -594,10 +621,10 @@ String  harga,idproduk,idprodukpenjualan,iddetail,jam,tanggal,sub_total;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnbaru;
     private javax.swing.JButton btnbayar;
     private javax.swing.JButton btncari;
     private javax.swing.JButton btnhapus;
+    private javax.swing.JButton btnkeluar;
     private javax.swing.JButton btntambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

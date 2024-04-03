@@ -89,7 +89,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="btnbayar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                                  <Component id="btnbaru" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnkeluar" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -158,7 +158,7 @@
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="btnbayar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnbaru" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnkeluar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -303,6 +303,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="BAYAR"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnbayarActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
@@ -359,16 +362,19 @@
         <Property name="text" type="java.lang.String" value="Data Penjualan"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnbaru">
+    <Component class="javax.swing.JButton" name="btnkeluar">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="12" style="1"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/image/icons8-new-20_1.png"/>
+          <Image iconType="3" name="/image/icons8-logout-rounded-20.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="BARU"/>
+        <Property name="text" type="java.lang.String" value="Keluar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnkeluarActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>

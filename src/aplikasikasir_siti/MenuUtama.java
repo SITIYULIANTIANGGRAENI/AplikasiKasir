@@ -99,10 +99,6 @@ ResultSet rst;
         btnProduk = new javax.swing.JButton();
         btnPenjualan = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
-        Beranda = new javax.swing.JMenu();
-        Register = new javax.swing.JMenuItem();
-        Login = new javax.swing.JMenuItem();
-        Logout = new javax.swing.JMenuItem();
         Toko = new javax.swing.JMenu();
         Produk = new javax.swing.JMenuItem();
         Pelanggan = new javax.swing.JMenuItem();
@@ -112,6 +108,10 @@ ResultSet rst;
         RkpLap = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
+        Beranda = new javax.swing.JMenu();
+        Register = new javax.swing.JMenuItem();
+        Login = new javax.swing.JMenuItem();
+        Logout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi Kasir (MenuUtama)");
@@ -288,33 +288,6 @@ ResultSet rst;
             }
         });
 
-        Beranda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-home-20_1.png"))); // NOI18N
-        Beranda.setText("Beranda");
-
-        Register.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-register-20_1.png"))); // NOI18N
-        Register.setText("Register");
-        Register.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegisterActionPerformed(evt);
-            }
-        });
-        Beranda.add(Register);
-
-        Login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-enter-20_1.png"))); // NOI18N
-        Login.setText("Login");
-        Login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginActionPerformed(evt);
-            }
-        });
-        Beranda.add(Login);
-
-        Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-logout-rounded-20_1.png"))); // NOI18N
-        Logout.setText("Logout");
-        Beranda.add(Logout);
-
-        jMenuBar1.add(Beranda);
-
         Toko.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-shop-20.png"))); // NOI18N
         Toko.setText("Master");
 
@@ -368,6 +341,33 @@ ResultSet rst;
 
         jMenuBar1.add(jMenu5);
 
+        Beranda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-home-20_1.png"))); // NOI18N
+        Beranda.setText("Beranda");
+
+        Register.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-register-20_1.png"))); // NOI18N
+        Register.setText("Register");
+        Register.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegisterActionPerformed(evt);
+            }
+        });
+        Beranda.add(Register);
+
+        Login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-enter-20_1.png"))); // NOI18N
+        Login.setText("Login");
+        Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginActionPerformed(evt);
+            }
+        });
+        Beranda.add(Login);
+
+        Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-logout-rounded-20_1.png"))); // NOI18N
+        Logout.setText("Logout");
+        Beranda.add(Logout);
+
+        jMenuBar1.add(Beranda);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -396,7 +396,7 @@ ResultSet rst;
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addComponent(btnPenjualan)))))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(763, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -412,14 +412,11 @@ ResultSet rst;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnProduk)
                     .addComponent(btnTambah))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPelanggan))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnPenjualan)))
-                .addGap(11, 11, 11))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPenjualan, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPelanggan))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         pack();
@@ -495,17 +492,17 @@ ResultSet rst;
     }//GEN-LAST:event_txtJamActionPerformed
 
     private void btnPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPelangganActionPerformed
-        btnPelanggan.setVisible(true);
+        new FormPelanggan().setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPelangganActionPerformed
 
     private void btnProdukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdukActionPerformed
-        btnProduk.setVisible(true);
+        new FormProduk().setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnProdukActionPerformed
 
     private void btnPenjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPenjualanActionPerformed
-        btnPenjualan.setVisible(true);
+        new FormPenjualan().setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPenjualanActionPerformed
 

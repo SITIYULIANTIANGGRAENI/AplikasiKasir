@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2024 at 03:24 AM
+-- Generation Time: Apr 03, 2024 at 04:05 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -69,6 +69,13 @@ CREATE TABLE `pelanggan` (
   `NomorTelepon` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `pelanggan`
+--
+
+INSERT INTO `pelanggan` (`PelangganID`, `NamaPelanggan`, `Alamat`, `NomorTelepon`) VALUES
+(1, 'Siti', 'Cibodas', 81234);
+
 -- --------------------------------------------------------
 
 --
@@ -95,6 +102,16 @@ CREATE TABLE `produk` (
   `Harga` decimal(10,2) NOT NULL,
   `Stok` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `produk`
+--
+
+INSERT INTO `produk` (`ProdukID`, `nama_produk`, `Harga`, `Stok`) VALUES
+('X040781', 'Kursi', '2000000.00', 50),
+('8991389220054', 'Buku Sidu', '4000.00', 50),
+('8993988690047', 'Penghapus Joyko', '1000.00', 100),
+('89922221088368', 'Buku', '5000.00', 400);
 
 --
 -- Indexes for dumped tables
